@@ -34,11 +34,6 @@ class MenuItem extends Model
         'all_day'   => 'All Day',
     ];
 
-    // public function getMealPeriodLabelAttribute(): string
-    // {
-    //     return self::MEAL_PERIODS[$this->meal_period] ?? ucfirst($this->meal_period);
-    // }
-
     // laravel accessor to format price for display, when fetched prce is a decimal, but we want to show it as a string with $ and 2 decimals
     public function getFormattedPriceAttribute(): string
     {
@@ -69,9 +64,4 @@ class MenuItem extends Model
             ->orderBy('sort_order')
             ->orderBy('created_at');
     }
-
-    // public function scopeAvailable(Builder $query): Builder
-    // {
-    //     return $query->where('is_available', true);
-    // }
 }

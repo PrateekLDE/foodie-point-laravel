@@ -217,6 +217,7 @@
         </a>
         <div class="topbar-nav">
             @auth
+                <a href="{{ route('admin.menu-items.index') }}">Home</a>
                 <a href="{{ route('admin.qr.show') }}">QR Code</a>
                 <a href="{{ route('menu.today') }}" target="_blank">Preview ↗</a>
                 <form action="{{ route('admin.logout') }}" method="POST" style="display:inline">
@@ -243,6 +244,5 @@
         @yield('content')
     </div>
 
-    <!-- @stack('scripts') -->
 </body>
 </html>
